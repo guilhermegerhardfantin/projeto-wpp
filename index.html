@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="ww.webp" type="image/png" />
   </head>
@@ -22,31 +26,74 @@
         <div class="row">
           <div class="col-12">
             <form
-              class="d-flex flex-row align-items-center justify-content-center"
+              class="d-flex flex-column align-items-center justify-content-center"
+              id="gerar-link"
             >
               <div class="my-3">
-                <label class="form-label" for="whatsapp">Número</label>
+                <label id="app" class="form-label" for="whatsapp">Número</label>
                 <input
                   placeholder="(00) 00000-0000"
-                  class="form-control"
+                  class="form-control phone_with_ddd"
                   type="text"
                   id="whatsapp"
+                  required
                 />
                 <button class="btn btn-outline-success mt-2 w-100">
-                  Gerar link
+                  Gerar link <i class="fa-brands fa-whatsapp"></i>
                 </button>
               </div>
-              
-           </form>
+              <div class="my-3 text-center" id="box-gerado">
+                <h2>
+                  <i class="fa-solid fa-check fa-fw text-success"></i>
+                  Link Gerado!
+                </h2>
+                <a
+                  class="text-decoration-none text-success"
+                  target="_blank"
+                  id="link-gerado"
+                  href=""
+                ></a>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary ms-2"
+                  id="copiar"
+                  data-clipboard-target="#link-gerado"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  data-bs-custom-class="custom-tooltip"
+                  data-bs-title="Copiar"
+                >
+                  <i class="fa-solid fa-clone fa-fw"></i>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+      integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script>
+      new ClipboardJS("#copiar");
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
   </body>
 </html>
-.
