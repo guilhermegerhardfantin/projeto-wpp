@@ -29,16 +29,32 @@
               class="d-flex flex-column align-items-center justify-content-center"
               id="gerar-link"
             >
-              <div class="my-3">
-                <label id="app" class="form-label" for="whatsapp">Número</label>
-                <input
-                  placeholder="(00) 00000-0000"
-                  class="form-control phone_with_ddd"
-                  type="text"
-                  id="whatsapp"
-                  required
-                />
-                <button class="btn btn-outline-success mt-2 w-100">
+              <div class="my-3 box-input">
+                <div class="mt-2">
+                  <label id="app" class="form-label" for="whatsapp"
+                    >Número</label
+                  >
+                  <input
+                    placeholder="(00) 00000-0000"
+                    class="form-control phone_with_ddd"
+                    type="text"
+                    id="whatsapp"
+                    required
+                  />
+                </div>
+                <div class="mt-2">
+                  <label for="mensagem" class="form-label">Mensagem <small>(opcional)</small></label>
+                  <textarea
+                    class="form-control"
+                    id="mensagem"
+                    rows="3"
+                  ></textarea>
+                </div>
+
+                <button
+                  id="gerar-link"
+                  class="btn btn-outline-success mt-3 py-2 w-100"
+                >
                   Gerar link <i class="fa-brands fa-whatsapp"></i>
                 </button>
               </div>

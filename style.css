@@ -9,4 +9,12 @@
 #box-gerado{
   display: none;
 }
-
+body{
+  background-color: rgb(215, 253, 205);
+}
+.box-input{
+  width: 400px;
+}
+#gerar-link{
+  
+}
